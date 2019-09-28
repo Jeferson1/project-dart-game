@@ -9,17 +9,41 @@
     position: relative;
     repeat: no-repeat;
     size: cover;
-    height: 650px;
-    padding-top: 50px;
+    height: 800px;
+    padding-top: 180px;
 }
-
 .background h1 {
     display: flex;
+    width: 500px;
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align: center;
     justify-content: center;
     font-family: 'Coda Caption', sans-serif;
     font-size: 80px;
-    font-weight: 800px;
     letter-spacing: 0.50em;
     color: yellow;
     transform: perspective(300px) scaleY(1.5) rotateX(-40deg);
+    height: 200px;
 }
+
+.btn-start {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    font-weight: 400px;
+    text-align: center;
+    background-color: #FF0000;
+    border-color: #FFFF00;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    color: yellow;
+    background-color: #FF0000;
+    border-color: #FFFF00;
+  }
+
