@@ -1,0 +1,22 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    border: solid red 2px;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800');
+
+.background {
+    background-image: url("./images/background.jpg");
+    position: relative;
+    repeat: no-repeat;
+    size: cover;
+    height: 650px;
+    padding-top: 50px;
+}
+
+.background h1 {
+    font-family: 'Coda Caption', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+}
