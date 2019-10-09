@@ -32,7 +32,7 @@ body {
     justify-content: center;
 }
 
-.btn {
+.start {
     font-weight: 400px;
     text-align: center;
     background-color: #FF0000;
@@ -41,7 +41,7 @@ body {
     color: #fff;
 }
   
-.btn:hover {
+.start:hover {
   color: yellow;
   background-color:#0000FF;
   border-color: #FFFF00;
