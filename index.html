@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DART GAME</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
+    <!-- Necessario habilitar permissão do browser para reproduzir audio -->
     <audio id="player" autoplay loop>
         <source src="./audio/audio.mp3" type="audio/mp3">
     </audio>
     <div class="background">
         <h1>DART<br>GAME</h1>
         <div class="btn-start">
-            <button  class="btn" type="submit">PRESS START</button>
+            <button class="start" type="submit">PRESS START</button>
         </div>
     </div>
+    <div class="gamescreen">
+
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
