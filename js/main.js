@@ -57,7 +57,7 @@ let points = 0;
 /* Função de tempo para atualizar a tela */
     setInterval(updateScreen, 1500);
 
-/* Função para disparar o dardo no alvo e somar pontuação*/    
+/* Função para disparar o dardo no alvo e somar pontuação */    
     function shoot(event){
         
         var x = event.pageX - screen.offsetLeft;
