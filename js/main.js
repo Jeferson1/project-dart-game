@@ -9,6 +9,9 @@ function startGame() {
     let points = 0;
     let timer = 20;
 
+/* Desabilitando botão de start após iniciar o jogo */
+    document.querySelector('button').setAttribute('disabled', 'disabled');
+
     /* Define a area de renderiação do jogo */
     let screen = document.querySelector('canvas');
     let brush = screen.getContext('2d');
@@ -62,8 +65,9 @@ function startGame() {
         score.innerText = timer;
     }
 
-    /* Função de tempo para atualizar a tela
-     e caixas de dialogo para vencedor e perdedor */
+    /* Função de tempo para atualizar a tela,
+    caixas de dialogo para vencedor e perdedor e 
+    Habilitando botão de start para iniciar um novo jogo */
     function stopGame() {
         if (timer == 0) {
             clearInterval(stopInterval);
@@ -75,6 +79,7 @@ function startGame() {
                 document.querySelector('.win').classList.remove('win-hidden');
                 document.querySelector('.win').classList.add('win-show');
             }
+            document.querySelector('button').removeAttribute('disabled', 'disabled');
         }
     }
 
