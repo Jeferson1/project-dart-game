@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <title>DART GAME</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
     <div>
         <nav>
             <h2>SCORE:<span class="score">0</span></h4>
-            <h2>TIMES UP:<span class="timer">20</span></h4>
+                <h2>TIMES UP:<span class="timer">20</span></h4>
         </nav>
     </div>
     <!-- Necessario habilitar permissão do browser para reproduzir audio -->
@@ -25,9 +27,21 @@
         </div>
     </div>
     <div class="gamescreen">
-        <canvas width="1000" height="400">
-        </canvas>
+        <canvas width="1000" height="400"></canvas>
+    </div>
+    <div>
+        <div class="win win win-hidden">
+            <h1>You Win!!!</h1>
+        </div>
+        <div class="lose lose-hidden">
+            <h1>You Lose,<br>Lets try again?</h1>
+        </div>
+    </div>
+    <div>
+        <h2>Instructions</h2>
+        <h3>Click on the center of the target to score before time runs out.</h3>
     </div>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
+
 </html>

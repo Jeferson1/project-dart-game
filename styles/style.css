@@ -5,50 +5,68 @@
 @import url('https://fonts.googleapis.com/css?family=Coda+Caption:800');
 
 body {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    padding: 0;
-    margin: 0;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
 }
 
 .background h1 {
-    display: flex;
-    width: 500px;
-    margin-left: 400px;
-    margin-right: 400px;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Coda Caption', sans-serif;
-    font-size: 80px;
-    letter-spacing: 0.50em;
-    color: yellow;
-    transform: perspective(300px) scaleY(1.5) rotateX(-40deg);
-    height: 200px;
-    text-shadow: 4px 4px 1px red, 10px 10px 1px black;
+  display: flex;
+  width: 500px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Coda Caption', sans-serif;
+  font-size: 80px;
+  letter-spacing: 0.50em;
+  color: yellow;
+  transform: perspective(300px) scaleY(1.5) rotateX(-40deg);
+  height: 200px;
+  text-shadow: 4px 4px 1px red, 10px 10px 1px black;
 }
 
 .btn-start {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .start {
-    font-weight: 400px;
-    text-align: center;
-    background-color: #FF0000;
-    border-color: #FFFF00;
-    font-size: 30px;
-    color: #fff;
+  font-weight: 400px;
+  text-align: center;
+  background-color: #FF0000;
+  border-color: #FFFF00;
+  font-size: 30px;
+  color: #fff;
 }
-  
+
 .start:hover {
   color: yellow;
-  background-color:#0000FF;
+  background-color: #0000FF;
   border-color: #FFFF00;
 }
 
 h2 {
   color: #fff;
+}
+
+.win-hidden {
+  visibility: hidden;
+}
+
+.lose-hidden {
+  visibility: hidden;
+}
+
+.win-show {
+  visibility: visible;
+  background-color: aquamarine
+}
+
+.lose-show {
+  visibility: visible;
+  background-color: aquamarine
 }
 
 /* @media screen and (max-width: 610px) {
