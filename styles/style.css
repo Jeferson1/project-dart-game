@@ -51,6 +51,15 @@ h2 {
   color: #fff;
 }
 
+.instructions-show{
+  visibility: visible;
+  color: aquamarine;
+}
+
+.instructions-hidden {
+  visibility: hidden;
+}
+
 .win-hidden {
   visibility: hidden;
 }

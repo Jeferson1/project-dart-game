@@ -1,23 +1,24 @@
 // debugger;
 
-
-
 /* Função para iniciar o jogo */
 function startGame() {
 
-/* Variavel acumuladora de pontuação, timer e velocidade */
+    /* Variavel acumuladora de pontuação, timer e velocidade */
     let points = 0;
     let timer = 20;
     
-/* Desabilitando botão de start após iniciar o jogo */
+    /* Desabilitando botão de start após iniciar o jogo */
     document.querySelector('button').setAttribute('disabled', 'disabled');
 
-/* Limpar pontuação e timer ao iniciar um novo jogo */
+    /* Limpar pontuação e timer ao iniciar um novo jogo */
     let textScore = document.querySelector('.score');
     textScore.innerText = 0;
     let textTimer = document.querySelector('.timer');
     textTimer.innerText = 20;
 
+    /* Remover instruções ao iniciar um novo jogo */
+    document.querySelector('.instructions').classList.remove('instructions-show');
+    document.querySelector('.instructions').classList.add('lose-hidden');
 
     /* Define a area de renderiação do jogo */
     let screen = document.querySelector('canvas');
