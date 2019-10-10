@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <div>
+        <nav>
+            <h2>SCORE:<span class="score">0</span></h4>
+            <h2>TIMES UP:<span class="timer">20</span></h4>
+        </nav>
+    </div>
     <!-- Necessario habilitar permissão do browser para reproduzir audio -->
-    <audio id="player" autoplay loop>
+    <audio id="player" controls autoplay loop>
         <source src="./audio/audio.mp3" type="audio/mp3">
     </audio>
     <div class="background">
@@ -19,7 +25,7 @@
         </div>
     </div>
     <div class="gamescreen">
-        <canvas width="1000" height="500">
+        <canvas width="1000" height="400">
         </canvas>
     </div>
     <script type="text/javascript" src="./js/main.js"></script>

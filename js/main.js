@@ -1,21 +1,24 @@
 
 // debugger;
 
-/* Variavel acumuladora de pontuação */
-let points = 0;
+
 
 /* Função para iniciar o jogo */
  function startGame(){
+
+/* Variavel acumuladora de pontuação e timer */    
+    let points = 0;
+    let timer = 20;
 
 /* Define a area de renderiação do jogo */
     let screen = document.querySelector('canvas');
     let brush = screen.getContext('2d');
     
     brush.fillStyle = '#12342A';
-    brush.fillRect(0, 0, 1000, 500);
+    brush.fillRect(0, 0, 1000, 400);
 
 /* Variaveis para desenhar o alvo e gerar aleatoriamente  */
-    let radius = 10;
+    let radius = 20;
     let xRandom;
     let yRandom;
 
@@ -30,13 +33,13 @@ let points = 0;
 
 /* Função para limpar a tela  */
     function clearScreen() {
-        brush.clearRect(0, 0, 1000, 500);
+        brush.clearRect(0, 0, 1000, 400);
     }
 
 /* Função para definir as areas do alvo */
     function drawTarget(x, y){
-        draw(x, y, radius + 20, 'red');
-        draw(x, y, radius + 10, 'white');
+        draw(x, y, radius + 30, 'red');
+        draw(x, y, radius + 20, 'white');
         draw(x, y, radius, 'red');
     }
 
@@ -49,13 +52,31 @@ let points = 0;
     function updateScreen(){
         clearScreen();
         xRandom = draftPosition(1000);
-        yRandom = draftPosition(500);
+        yRandom = draftPosition(400);
 
         drawTarget(xRandom, yRandom);
+        
+        timer -= 1;
+        let score = document.querySelector('.timer');
+        score.innerText = timer;
     }
 
 /* Função de tempo para atualizar a tela */
-    setInterval(updateScreen, 1500);
+    
+    function stopGame(){
+        if(timer === 0){
+        clearInterval(stopInterval);
+        clearScreen();
+
+        }
+    }
+
+    let stopInterval = setInterval(() => {
+        updateScreen();
+        stopGame();
+    }, 1000);
+
+//===========================================================   
 
 /* Função para disparar o dardo no alvo e somar pontuação,
 obtendo a posição e comparando com o ponto do centro do alvo
@@ -70,8 +91,11 @@ para saber se acertou */
             &&(y > yRandom - radius)
             &&(y < yRandom + radius)){
 
+        clearScreen();
+        
         points += 1;
-
+        let score = document.querySelector('.score');
+        score.innerText = points;
        }
     }
 

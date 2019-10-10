@@ -47,6 +47,10 @@ body {
   border-color: #FFFF00;
 }
 
-@media screen and (max-width: 610px) {
-
+h2 {
+  color: #fff;
 }
+
+/* @media screen and (max-width: 610px) {
+
+} */
