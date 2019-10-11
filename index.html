@@ -11,21 +11,25 @@
 
 <body>
     <div>
-        <nav>
+        <nav class="nav">
             <h2>SCORE:<span class="score">0</span></h4>
-                <h2>TIMES UP:<span class="timer">20</span></h4>
+            <div class="background">
+                <h1>DART<br>GAME</h1>
+                <div class="btn-start">
+                    <button class="start" type="submit">PRESS START</button>
+                </div>
+            </div>
+            <h2>TIMES UP:<span class="timer">20</span></h4>
         </nav>
+        <div  class="instructions instructions-show">
+            <h2>HOW TO PLAY</h2>
+            <h3>Click on the center of the target to score before time runs out.</h3>
+        </div>
     </div>
     <!-- Necessario habilitar permissão do browser para reproduzir audio -->
     <audio id="player" controls autoplay loop>
         <source src="./audio/audio.mp3" type="audio/mp3">
     </audio>
-    <div class="background">
-        <h1>DART<br>GAME</h1>
-        <div class="btn-start">
-            <button class="start" type="submit">PRESS START</button>
-        </div>
-    </div>
     <div class="gamescreen">
         <canvas width="1000" height="400"></canvas>
     </div>
@@ -36,10 +40,6 @@
         <div class="lose lose-hidden">
             <h1>You Lose,<br>Lets try again?</h1>
         </div>
-    </div>
-    <div  class="instructions instructions-show">
-        <h2>Instructions</h2>
-        <h3>Click on the center of the target to score before time runs out.</h3>
     </div>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
