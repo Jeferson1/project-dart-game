@@ -6,6 +6,12 @@ function startGame() {
     /* Variavel acumuladora de pontuação, timer e velocidade */
     let points = 0;
     let timer = 20;
+
+    /* Resetando mensagem de vencedor e perdedor ao iniciar um novo jogo */
+    document.querySelector('.lose').classList.remove('lose-show');
+    document.querySelector('.lose').classList.add('lose-hidden');
+    document.querySelector('.win').classList.remove('win-show');
+    document.querySelector('.win').classList.add('win-hidden');
     
     /* Desabilitando botão de start após iniciar o jogo */
     document.querySelector('button').setAttribute('disabled', 'disabled');
@@ -95,9 +101,7 @@ function startGame() {
         updateScreen();
         stopGame();
     }, 1000);
-
-    //===========================================================   
-
+    
     /* Função para disparar o dardo no alvo e somar pontuação,
     obtendo a posição e comparando com o ponto do centro do alvo
     para saber se acertou */
