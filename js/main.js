@@ -126,6 +126,7 @@ window.onload = function () {
     let pressStart = document.querySelector('.start');
     pressStart.onclick = startGame;
 
+    /* Função para sortear cor aleatoria do how to play */
     function generateRandomColor() {
         return '#'+Math.floor(Math.random()*16777215).toString(16);
     }
