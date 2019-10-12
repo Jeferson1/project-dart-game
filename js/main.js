@@ -30,7 +30,7 @@ function startGame() {
     let screen = document.querySelector('canvas');
     let brush = screen.getContext('2d');
 
-    brush.fillStyle = '#12342A';
+    brush.fillStyle = '#0012342A';
     brush.fillRect(0, 0, 800, 400);
 
     /* Variaveis para desenhar o alvo e gerar aleatoriamente  */
