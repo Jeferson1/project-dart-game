@@ -1,5 +1,3 @@
-// debugger;
-
 /* Função para iniciar o jogo */
 function startGame() {
 
