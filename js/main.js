@@ -31,7 +31,7 @@ function startGame() {
     let brush = screen.getContext('2d');
 
     brush.fillStyle = '#12342A';
-    brush.fillRect(0, 0, 1000, 400);
+    brush.fillRect(0, 0, 800, 400);
 
     /* Variaveis para desenhar o alvo e gerar aleatoriamente  */
     let radius = 20;
@@ -49,7 +49,7 @@ function startGame() {
 
     /* Função para limpar a tela  */
     function clearScreen() {
-        brush.clearRect(0, 0, 1000, 400);
+        brush.clearRect(0, 0, 800, 400);
     }
 
     /* Função para definir as areas do alvo */
@@ -62,14 +62,14 @@ function startGame() {
     }
 
     /* Função para sortear a área aleatória do alvo  */
-    function draftPosition(max) {
-        return Math.floor(Math.random() * max);
+    function draftPosition(area) {
+        return Math.floor(Math.random() * area);
     }
 
     /* Função para atualizar a tela */
     function updateScreen() {
         clearScreen();
-        xRandom = draftPosition(1000);
+        xRandom = draftPosition(800);
         yRandom = draftPosition(400);
 
         drawTarget(xRandom, yRandom);
@@ -105,7 +105,7 @@ function startGame() {
     /* Função para disparar o dardo no alvo e somar pontuação,
     obtendo a posição e comparando com o ponto do centro do alvo
     para saber se acertou */
-    function shoot(event) {
+    function shoot() {
 
         let x = event.pageX - screen.offsetLeft;
         let y = event.pageY - screen.offsetTop;

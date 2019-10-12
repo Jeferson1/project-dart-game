@@ -1,9 +1,25 @@
 * {
-  border: solid red 2px;
+  border: 2px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Coda+Caption:800');
 
+/* Organizando elementos da nav */
+.nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  font-family: 'Coda Caption', sans-serif;
+  color: #FFFF00;
+}
+
+/* Ajustando altura da pontuação e do tempo  */
+.nav > h2 {
+  padding-top: 80px;
+}
+
+/* Definição da imagem de fundo */
 body {
   background-image: url("../images/background.jpg");
   background-size: cover;
@@ -11,10 +27,10 @@ body {
   margin: 0;
 }
 
-.background h1 {INSTRUCTIONS
+/* Estilizando a fonte do titulo */
+.background > h1 {
   display: flex;
-  width: 500px;
-  margin-left: 40px;
+  margin-left: 90px;
   margin-right: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -25,39 +41,17 @@ body {
   letter-spacing: 60px;
   color: yellow;
   transform: perspective(300px) scaleY(1.5) rotateX(-40deg);
-  height: 200px;
+  height: 190px;
   text-shadow: 4px 4px 1px red, 10px 10px 1px black;
 }
 
-.instructions > h2 {
-  display: flex;
-  justify-content: space-around;
-  font-size: 50px;
-  font-family: 'Coda Caption', sans-serif;
-  color: azure;
-  margin: 20px;
-  margin-right: 50px;
-  
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  font-size: 40px;
-  font-family: 'Coda Caption', sans-serif;
-  color: #FFFF00;
-}
-
-audio {
-  height: 30px;
-  width: 400px;
-}
-
+/* Posição do botão */
 .btn-start {
   display: flex;
   justify-content: center;
 }
 
+/* Estilizando o botão */
 .start {
   font-weight: 400px;
   text-align: center;
@@ -65,37 +59,99 @@ audio {
   border-color: #FFFF00;
   font-size: 30px;
   color: #fff;
+  border: solid yellow 2px;
 }
 
+/* Estilizando o botão ao passar o mouse */
 .start:hover {
   color: yellow;
   background-color: #0000FF;
   border-color: #FFFF00;
 }
 
+/* Estilizando a fonte de instruções */
+.instructions > h2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 50px;
+  font-family: 'Coda Caption', sans-serif;
+  color: azure;
+  margin: 20px;
+  margin-right: 110px;
+  color: #0000FF;
+  text-shadow: 4px 4px 1px black, 10px 10px 1px black;
+}
+
+/* Estilizando as instruções */
+.instructions > h3 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  font-family: 'Coda Caption', sans-serif;
+  margin: 20px;
+  margin-right: 110px;
+  /* text-shadow: 4px 4px 1px black, 10px 10px 1px black; */
+}
+
+/* Classe para exibir as instruções */
 .instructions-show{
   visibility: visible;
   color: aquamarine;
 }
 
+/* Classe para esconder as instruções */
 .instructions-hidden {
   visibility: hidden;
 }
 
+.gamescreen {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* claase para esconder o feedback de vencedor */
 .win-hidden {
   visibility: hidden;
 }
-
+/* claase para esconder o feedback de perdedor */
 .lose-hidden {
   visibility: hidden;
 }
 
+/* Classe para exibir o feedback de vencedor */
 .win-show {
   visibility: visible;
-  background-color: aquamarine
+  background-color: #4EBDC8
 }
 
+/* Classe para exibir o feedback de perdedor */
 .lose-show {
   visibility: visible;
-  background-color: aquamarine
+  background-color: #4EBDC8
+}
+
+/* Definido estilo para as caixas de feedback */
+.gamescreen > div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px ;
+  width: 400px;
+}
+
+/* Definindo posição e cores para as caixas de feedback */
+.gamescreen > div > h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: 'Coda Caption', sans-serif;
+  margin: 10px;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+}
+
+/* Tamanho da tag audio */
+audio {
+  height: 20px;
+  width: 400px;
 }

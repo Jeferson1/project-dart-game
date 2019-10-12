@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Cabeçalho da página -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +8,47 @@
     <title>DART GAME</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-
+<!-- Corpo da pagina -->
 <body>
+    <!-- Div que organiza o titulo da pagina, pontuação, tempo e botão -->
     <div>
+        <!-- Nav da pagina -->
         <nav class="nav">
+            <!-- Pontuação -->
             <h2>SCORE:<span class="score">0</span></h4>
-            <div class="background">
+            <!-- Class para estilizar a fonte -->
+             <div class="background">
                 <h1>DART<br>GAME</h1>
+                <!-- Botao de inicio do jogo -->
                 <div class="btn-start">
                     <button class="start" type="submit">PRESS START</button>
                 </div>
             </div>
+            <!-- Tempo do jogo -->
             <h2>TIMES UP:<span class="timer">20</span></h4>
         </nav>
+        <!-- Instruções do jogo -->
         <div  class="instructions instructions-show">
             <h2>HOW TO PLAY</h2>
             <h3>Click on the center of the target to score before time runs out.</h3>
         </div>
     </div>
-    <!-- Necessario habilitar permissão do browser para reproduzir audio -->
-    <audio id="player" controls autoplay loop>
-        <source src="./audio/audio.mp3" type="audio/mp3">
-    </audio>
     <div class="gamescreen">
-        <canvas width="1000" height="400"></canvas>
-    </div>
-    <div>
+        <!-- Feedback para o vencedor -->
         <div class="win win win-hidden">
             <h1>You Win!!!</h1>
         </div>
+        <!-- Area do jogo -->
+        <canvas width="800" height="400"></canvas>
+        <!-- Feedback para o perdedor-->
         <div class="lose lose-hidden">
             <h1>You Lose,<br>Lets try again?</h1>
         </div>
     </div>
     <script type="text/javascript" src="./js/main.js"></script>
+    <!-- Necessario habilitar permissão do browser para reproduzir audio -->
+    <audio id="player" autoplay loop>
+        <source src="./audio/audio.mp3" type="audio/mp3">
+    </audio>
 </body>
-
 </html>
