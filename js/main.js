@@ -100,7 +100,7 @@ function startGame() {
     let stopInterval = setInterval(() => {
         updateScreen();
         stopGame();
-    }, 1000);
+    }, 1200);
     
     /* Função para disparar o dardo no alvo e somar pontuação,
     obtendo a posição e comparando com o ponto do centro do alvo
@@ -127,4 +127,14 @@ function startGame() {
 window.onload = function () {
     let pressStart = document.querySelector('.start');
     pressStart.onclick = startGame;
+
+    function generateRandomColor() {
+        return '#'+Math.floor(Math.random()*16777215).toString(16);
+    }
+      
+    function changeColor() {
+        let colorTitle = document.querySelector('.how-to-play');
+        colorTitle.style.color = generateRandomColor();
+      }
+    setInterval(changeColor, 500);
 };
