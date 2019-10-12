@@ -24,7 +24,7 @@ function startGame() {
 
     /* Remover instruções ao iniciar um novo jogo */
     document.querySelector('.instructions').classList.remove('instructions-show');
-    document.querySelector('.instructions').classList.add('lose-hidden');
+    document.querySelector('.instructions').classList.add('instructions-hidden');
 
     /* Define a area de renderiação do jogo */
     let screen = document.querySelector('canvas');
