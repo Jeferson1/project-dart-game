@@ -100,7 +100,7 @@ function startGame() {
     let stopInterval = setInterval(() => {
         updateScreen();
         stopGame();
-    }, 1000);
+    }, 1200);
     
     /* Função para disparar o dardo no alvo e somar pontuação,
     obtendo a posição e comparando com o ponto do centro do alvo
