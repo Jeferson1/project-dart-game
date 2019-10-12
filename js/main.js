@@ -125,7 +125,6 @@ function startGame() {
 window.onload = function () {
     let pressStart = document.querySelector('.start');
     pressStart.onclick = startGame;
-<<<<<<< HEAD
 
     function generateRandomColor() {
         return '#'+Math.floor(Math.random()*16777215).toString(16);
@@ -137,6 +136,3 @@ window.onload = function () {
       }
     setInterval(changeColor, 500);
 };
-=======
-};
->>>>>>> 007bfa8caaf8776c6ded1f4b65d9ecee46ab7cb5
